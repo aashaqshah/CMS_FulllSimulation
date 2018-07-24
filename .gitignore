@@ -1,4 +1,5 @@
 *.stdout
+*.xz
 *.root
 *.log
 

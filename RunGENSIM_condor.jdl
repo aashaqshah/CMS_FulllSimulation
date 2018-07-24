@@ -5,9 +5,8 @@ Should_Transfer_Files = YES
 WhenToTransferOutput = ON_EXIT
 Transfer_Input_Files = RunGENSIM_condor.sh 
 x509userproxy = $ENV(X509_USER_PROXY)
-request_memory = 3000
-Output = aQGC_WPlepWMhadJJ_EWK_LO_NPle1_tarball_MadDefCard_$(Process)_new2.stdout
-Error  = aQGC_WPlepWMhadJJ_EWK_LO_NPle1_tarball_MadDefCard_$(Process)_new2.stdout
-Log  = mini_aod_$(Process).log
-Arguments = inputFiles=_$(Process)_aQGC
-Queue 5
+Output = LogFiles_ggh01_M125_Toa01a01_M20_Tomumubb_23July/Production_ggH_$(Process)_new.stdout
+Error  = LogFiles_ggh01_M125_Toa01a01_M20_Tomumubb_23July/Production_ggH_$(Process)_new.stdout
+Log  =   LogFiles_ggh01_M125_Toa01a01_M20_Tomumubb_23July/mini_aod_$(Process).log
+Arguments = inputFiles=_$(Process)_aQGC  ggh01_M125_Toa01a01_M20_Tomumubb_slc6_amd64_gcc481_CMSSW_7_1_30_tarball.tar.xz ggh01_M125_Toa01a01_M20_Tomumubb $(Process)+$(cluster) 
+Queue 30
